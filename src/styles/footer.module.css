@@ -1,0 +1,15 @@
+.footer {
+  border-color: var(--accent);
+
+  /* background-color: transparent; */
+  background-image: radial-gradient(
+    circle at center,
+    var(--background) 20%,
+    transparent 20.5%,
+    transparent 49.5%,
+    var(--background) 50%
+  );
+
+  background-size: 15px 15px;
+  backdrop-filter: blur(15px) brightness(85%);
+}

@@ -1,0 +1,7 @@
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--accent);
+}

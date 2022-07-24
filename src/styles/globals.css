@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* Some Additional Colors */
+  /* https://cln.sh/Bmgcn9 */
+  --void: #000;
+  --black: #111111;
+  --ash-black: #10110e;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #f108a4;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  /* Control Colors */
+  --background: var(--black);
+  --accent: var(--white);
+
+  transition: all 0.3s ease-in;
+  background-color: var(--background);
+  color: var(--accent);
+}
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+/* Make the main app container have full height */
+#__next {
+  min-height: 100vh;
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 15%;
+  fill: none;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
