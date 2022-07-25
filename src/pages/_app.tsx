@@ -8,9 +8,22 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const container: Variants = {
     hidden: {
       opacity: 0,
+      scale: 0.5,
     },
     show: {
       opacity: 1,
+      scale: 1,
+      transition: {
+        default: {
+          duration: 0.3,
+          ease: [0, 0.71, 0.2, 1.01],
+        },
+        scale: {
+          type: "spring",
+          duration: 0.5,
+          bounce: 0.4,
+        },
+      },
     },
   };
   return (

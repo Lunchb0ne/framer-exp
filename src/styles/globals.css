@@ -18,12 +18,13 @@ body {
   --red: #fe0222;
   --orange: #fd7702;
   --yellow: #ffbb00;
+  --cursor: 'auto'
 
-  /* Control Colors */
+  /* Control Colors and Default Values */
+  transition: all 0.3s ease-in;
   --background: var(--black);
   --accent: var(--white);
-
-  transition: all 0.3s ease-in;
+  cursor: var(--cursor);
   background-color: var(--background);
   color: var(--accent);
 }

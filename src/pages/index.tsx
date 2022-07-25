@@ -5,11 +5,12 @@ import Link from "next/link";
 import React from "react";
 
 const Home = () => {
-  const { setAccent, setBackground } = useThemeContext();
+  const { setAccent, setBackground, setCursor } = useThemeContext();
 
   React.useEffect(() => {
     setAccent("white");
     setBackground("black");
+    setCursor("auto");
   });
 
   const container: Variants = {
@@ -17,7 +18,8 @@ const Home = () => {
     show: {
       opacity: 1,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
+        ease: [0, 0.71, 0.2, 1.01],
         staggerChildren: 0.2,
       },
     },

@@ -6,10 +6,11 @@ import Head from "next/head";
 import React from "react";
 
 export default function Chaser() {
-  const { setAccent, setBackground } = useThemeContext();
+  const { setAccent, setBackground, setCursor } = useThemeContext();
   React.useEffect(() => {
     setAccent("pink");
     setBackground("black");
+    setCursor("none");
   });
 
   const ref = React.useRef(null);
@@ -23,7 +24,7 @@ export default function Chaser() {
       <motion.div
         ref={ref}
         className={styles.box}
-        animate={{ x, y }}
+        animate={{ translateX: x, translateY: y, cursor: "none" }}
         transition={{
           type: "spring",
           damping: 3,
